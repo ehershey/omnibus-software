@@ -25,6 +25,7 @@ dependency "erlang"
 
 version("3.7.6")  { source md5: "d8db2d979a66e520b23be29d9b43af70" }
 version("3.6.16") { source md5: "2a50d171fcda001e72ca751ccaa2b234" }
+version("3.6.15") { source md5: "1dd9a5d000e11064efec23c1a76e5d5c" }
 version("3.6.0")  { source md5: "61a3822f3af0aaa30da7230dccb17067" }
 version("3.3.4")  { source md5: "61a3822f3af0aaa30da7230dccb17067" }
 version("2.8.7")  { source md5: "35e8d78f8d7ae4372db23fe50db82c64" }
@@ -35,9 +36,16 @@ version("3.7.6") do
             url: "https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.7.6/rabbitmq-server-generic-unix-3.7.6.tar.xz" )
 end
 
+# this didn't work
 version("3.6.16") do
   source(sha256: "d7b0a5dbe670a79da7895b0dea6ccc74e778c3d309b6f7116e8ee4e2bd796b20",
             url: "https://bintray.com/rabbitmq/all/download_file?file_path=rabbitmq-server%2F3.6.16%2Frabbitmq-server-generic-unix-3.6.16.tar.xz" )
+end
+
+# this didn't work either
+version("3.6.15") do
+  source(sha256: "04e6a291642f80e87fc892d5e8ea309fb3fab85ebb64a79a70dfe6c6cfde36fb",
+            url: "https://www.rabbitmq.com/releases/rabbitmq-server/v3.6.15/rabbitmq-server-generic-unix-3.6.15.tar.xz" )
 end
 
 version("3.6.6") do
